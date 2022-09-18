@@ -2,6 +2,7 @@ const Koa = require("koa");
 const Router = require("koa-router"); // 支持路由
 const serve = require("koa-static"); // 支持静态文件服务
 const path = require("path");
+const logger = require('koa-logger')
 const cors = require("koa2-cors"); // 支持跨域
 const json = require("koa-json"); // 美化json返回对象
 const koaBody = require("koa-body");
@@ -14,6 +15,7 @@ const visitAddress = {
     ip: "localhost",
     port: 3000,
 };
+app.use(logger());
 app.use(serve(path.join(__dirname, "./" + savePath)));
 app.use(cors());
 app.use(
