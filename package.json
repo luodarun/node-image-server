@@ -1,0 +1,24 @@
+{
+  "name": "self-image-server",
+  "version": "1.0.0",
+  "description": "图片上传服务器",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js -i chrome",
+    "server": "pm2 startOrGracefulReload processes.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "download": "^8.0.0",
+    "koa": "^2.13.4",
+    "koa-body": "^5.0.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-router": "^12.0.0",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6"
+  }
+}

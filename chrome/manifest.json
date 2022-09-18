@@ -1,0 +1,30 @@
+{
+    "name": "图片上传",
+    "version": "1.0",
+    "description": "这个是用来上传图片的插件",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "service_worker.js"
+    },
+    "permissions": ["declarativeContent", "storage", "activeTab", "contextMenus", "clipboardRead", "clipboardWrite"],
+    "externally_connectable": {
+        "matches": ["*://*.xxxxxx.com/*"]
+    },
+    "content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+            "run_at": "document_end",
+			"js": ["js/content-script.js"]
+		}
+	],
+    "action":{
+        "default_popup": "popup.html",
+        "default_title": "设置"
+    },
+    "icons": {
+        "16": "img/get_started16.png",
+        "32": "img/get_started32.png",
+        "48": "img/get_started48.png",
+        "128": "img/get_started128.png"
+    }
+}

@@ -1,0 +1,55 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            .inline-form {
+                display: flex;
+            }
+            .form-address-input {
+                font-size: inherit;
+                height: 32px;
+                line-height: 32px;
+                padding: 0;
+                box-sizing: border-box;
+                margin-right: 2px;
+            }
+            .form-button {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 1;
+                height: 32px;
+                white-space: nowrap;
+                cursor: pointer;
+                color: #fff;
+                text-align: center;
+                box-sizing: border-box;
+                outline: none;
+                transition: 0.1s;
+                font-weight: 500;
+                user-select: none;
+                vertical-align: middle;
+                -webkit-appearance: none;
+                background-color: #409eff;
+                border: 1px solid #409eff;
+                padding: 8px 15px;
+                font-size: 14px;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="inline-form">
+            <input
+                id="formAddress"
+                class="form-address-input"
+                type="text"
+                placeholder="请输入上传地址"
+            />
+            <button id="formButton" class="form-button">生效</button>
+        </div>
+        <script src="popup.js"></script>
+    </body>
+</html>
